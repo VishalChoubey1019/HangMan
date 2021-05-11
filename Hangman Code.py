@@ -17,7 +17,7 @@ if play == 'enter':
 
   guess = ''
   word= RandomWords()
-  word.get_random_word()
+  word.get_random_word(hasDictionaryDef="true")
   
   #original code
   #word = random.choice(list)
