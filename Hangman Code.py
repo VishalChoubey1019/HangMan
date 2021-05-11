@@ -1,3 +1,6 @@
+#using another package known as random word which can be installed using ```pip install random-word```
+#https://pypi.org/project/Random-Word/ check this out for more use of random word and upgrade it using verbs adjectives places options in future
+from random_word import RandomWords
 import random
 import time
 play = input("To Start The Game Press Enter\n")
@@ -8,11 +11,17 @@ if play == 'enter':
   print ("NOTE: \n1] Make sure you don't use any capital letters.\n2] There are no repeating letters in the word.\n3] The First Letter Will Be Provided To You.\n4] If The Word Has More Than 8 Letters, Last Letter Will Also Be Given.\n")
   time.sleep(5)
   print("ENJOY!\n")
-  list = ['army', 'beautiful', 'hacked', 'love', 'dance', 'monkey' , 'bot', 'gun','polish','duration','zodiac','worthy','grape','me','you','husky','dog','cat','lion','tiger','beard','brush','sword','brown','grey','red','black','oxygen','water','heat','pray','gold','golf','erase','clear','clean','head','shoulder','black','blank','burst','goal','glow']
+  
+  #I have commented the original code so if you find any difficulty you can redo the code
+  #list = ['army', 'beautiful', 'hacked', 'love', 'dance', 'monkey' , 'bot', 'gun','polish','duration','zodiac','worthy','grape','me','you','husky','dog','cat','lion','tiger','beard','brush','sword','brown','grey','red','black','oxygen','water','heat','pray','gold','golf','erase','clear','clean','head','shoulder','black','blank','burst','goal','glow']
 
   guess = ''
-
-  word = random.choice(list)
+  word= RandomWords()
+  word.get_random_word(hasDictionaryDef="true")
+  
+  #original code
+  #word = random.choice(list)
+  
   turns = len(word)+3
   ans = ''
   print(f'Length of the word= {len(word)}\n')
